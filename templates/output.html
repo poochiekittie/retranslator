@@ -1,0 +1,7 @@
+<html>
+	<title>Results</title>
+	<p>{{message.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")|safe}}</p>
+	<p>Similarity measurement = 1 - (Levenstein distance)/(length of sentence). Lower values generally indicate greater dissimilarity to the original sentence. A similarity measurement of 1 indicates that the retranslated sentences are the same to the original. </p>
+	<img src = "{{url_for('static', filename=image + "?" + version) | replace('%3F', '?') }}"/>
+	<p>Distances: {{distances}}</p>
+</html>
